@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components'
+import { theme } from './themes/light'
 
 const EstiloGlobal = createGlobalStyle`
   *{
@@ -11,6 +12,7 @@ const EstiloGlobal = createGlobalStyle`
   body {
     margin-top:80px;
     padding-bottom: 80px;
+    background-color: ${(props) => (props.theme as theme).corDeFundo};
 
     @media(max-width: 768px) {
       padding-top: 16px;
